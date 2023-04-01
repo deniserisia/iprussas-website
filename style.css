@@ -18,7 +18,7 @@
     --main-color: #0ef;
     --rosa-color:  #C20C45;
     --verde-logo: #035941;
-    --azul-claro-logo: #CAD7D2;
+    --azul-claro-logo: #D6B271;
 }
 
 html{
@@ -42,7 +42,7 @@ body{
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: #C20C45;
+    background-color: #D6B271;
     border-radius: 100vw;
 }
 ::-webkit-scrollbar-thumb:hover{
@@ -83,4 +83,78 @@ section{
 .navbar a:hover,
 .navbar a:active {
     color: var(--azul-claro-logo);
+}
+
+.ministerios{
+    background: var(--bg-color);
+}
+.ministerios h2{
+    margin-bottom: 3rem;
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+.ministerios p{
+    font-size: 1.6rem;
+    text-align: center;
+}
+.ministerios-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.ministerios-container .ministerios-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+.ministerios-box img{
+    width: 100%;
+    transition: .5s ease;
+}
+.ministerios-box:hover img{
+    transform: scale(1.1);
+}
+.ministerios-box .camada-ministerios{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.1), var(--rosa-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.ministerios-box:hover .camada-ministerios{
+    transform: translateY(0);
+}
+.ministerios-projeto h4{
+    font-size: 3rem;
+}
+.ministerios-projeto p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+.ministerios-projeto a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.ministerios-projeto a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
 }
